@@ -11,7 +11,7 @@ export function getStaticProps(context) {
 
 export function getStaticPaths() {
   return {
-    fallback: true,
+    fallback: "blocking",
     paths: [
       { params: { id: "product-1" } },
       { params: { id: "product-2" } },
