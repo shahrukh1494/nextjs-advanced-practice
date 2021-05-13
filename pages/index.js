@@ -2,8 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-export function getServerSideProps() {
-  console.log("check ", process.env.SPECIFICITY_CHECK);
+export async function getServerSideProps(context) {
+  console.log(context);
 
   return {
     props: {},
@@ -11,12 +11,6 @@ export function getServerSideProps() {
 }
 
 export default function Home() {
-  console.log(
-    "env value = ",
-    process.env.SECRET_VARIABLE,
-    process.env.NEXT_PUBLIC_MY_FIRST_BROWSERVARIABLE
-  );
-
   return (
     <div className={styles.container}>
       <Head>
