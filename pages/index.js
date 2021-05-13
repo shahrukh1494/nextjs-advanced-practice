@@ -2,18 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-export async function getServerSideProps(context) {
+export function getStaticProps(context) {
   console.log(context);
 
-  // context.res.statusCode = 418;
-  // context.res.write(JSON.stringify({ something: "cool" }));
-  // context.res.end();
-
   return {
-    redirect: {
-      destination: "https://google.com",
-      permanent: true, //permanent redirect, status code: 308
-    },
+    props: {},
   };
 }
 
