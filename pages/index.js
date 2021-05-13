@@ -5,12 +5,15 @@ import styles from "../styles/Home.module.css";
 export async function getServerSideProps(context) {
   console.log(context);
 
-  context.res.statusCode = 418;
-  context.res.write(JSON.stringify({ something: "cool" }));
-  context.res.end();
+  // context.res.statusCode = 418;
+  // context.res.write(JSON.stringify({ something: "cool" }));
+  // context.res.end();
 
   return {
-    props: {},
+    redirect: {
+      destination: "https://google.com",
+      permanent: false, //temporary redirect, status code: 307
+    },
   };
 }
 
