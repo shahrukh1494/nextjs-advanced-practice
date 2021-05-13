@@ -12,7 +12,7 @@ export async function getServerSideProps(context) {
   return {
     redirect: {
       destination: "https://google.com",
-      permanent: false, //temporary redirect, status code: 307
+      permanent: true, //permanent redirect, status code: 308
     },
   };
 }
