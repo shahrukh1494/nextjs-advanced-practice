@@ -3,17 +3,12 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 export function getServerSideProps() {
-  console.log(process.env.SECRET_VARIABLE);
+  console.log("check ", process.env.SPECIFICITY_CHECK);
 
   return {
     props: {},
   };
 }
-
-//created .env.local which is already added to .gitignore by next.js
-//variables in .env.local ->
-//SECRET_VARIABLE=codedamn.com
-//NEXT_PUBLIC_MY_FIRST_BROWSERVARIABLE=somevalue
 
 export default function Home() {
   console.log(
