@@ -1,12 +1,10 @@
-import dynamic from "next/dynamic";
-
-const DynamicH1 = dynamic(() => import("./DynamicH1"));
+import Image from "next/image";
 
 export default function Home(props) {
   return (
     <div>
-      <DynamicH1 />
       <p>Hello World</p>
+      <Image src="/Capture.jpg" width={1920} height={720} />
     </div>
   );
 }
